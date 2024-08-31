@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 104.138 s <<< FAILURE! - in runner.TestRunner
+Login with valid credentials(Login functionality)  Time elapsed: 101.09 s  <<< ERROR!
+java.lang.NullPointerException
+
