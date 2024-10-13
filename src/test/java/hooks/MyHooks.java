@@ -25,7 +25,7 @@ public class MyHooks {
 		
 	}
 	
-	//@After
+	@After
 	public void tearDown(Scenario scenario) {
 		
 		String scenarioName = scenario.getName().replaceAll(" ","_");

@@ -22,7 +22,7 @@ public class LoginPage {
 	}
 
 	@FindBy(xpath="//input[@id='mat-input-0']")
-	private WebElement emailField;
+	private WebElement usernameField;
 
 	@FindBy(xpath="//input[@id='mat-input-1']")
 	private WebElement passwordField;
@@ -36,12 +36,9 @@ public class LoginPage {
 	
 	@FindBy(xpath="//div[contains(@class,'alert-danger')]")
 	private WebElement warningMessage;
-	
-	@FindBy(linkText=" rakesh  Admin ")
-	private WebElement successMessage;
 
-	public void enterEmailAddress(String emailText) {
-		elementUtils.typeTextIntoElement(emailField, emailText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+	public void enterUsername(String usernameText) {
+		elementUtils.typeTextIntoElement(usernameField, usernameText,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
 
 	}
 
@@ -61,6 +58,12 @@ public class LoginPage {
 
 		elementUtils.clickOnElement(loginButton,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
 
+	}
+	
+	public String getWarningMessageText() {
+		
+		return elementUtils.getTextFromElement(warningMessage,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
+		
 	}
 	
 
